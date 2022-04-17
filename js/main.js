@@ -1,3 +1,5 @@
+// note. These were added before creating seperate js files to categorise the challenges. Needs to be sorted properly.
+
 // 1.6 Codewars - https://www.codewars.com/kata/52e88b39ffb6ac53a400022e/train/javascript
 function int32ToIp(int32){
     let arr = []
