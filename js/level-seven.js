@@ -7,13 +7,13 @@ let returnChange = [0, 0, 0, 0, 0, 0];
     returnChange[index] = num;
     amount = amount - (num * value)
   }
-  subtractChange(100, 0);
-  subtractChange(50, 1);
-  subtractChange(20, 2);
-  subtractChange(10, 3);
-  subtractChange(5, 4);
-  subtractChange(1, 5);
-  
+  subtractChange(100, 5);
+  subtractChange(50, 4);
+  subtractChange(20, 3);
+  subtractChange(10, 2);
+  subtractChange(5, 1);
+  subtractChange(1, 0);
+
   return returnChange
 
 }

@@ -1,3 +1,43 @@
+// codewars level 5 challenge - https://www.codewars.com/kata/513e08acc600c94f01000001/train/javascript - converting RGB code to hex code - the formula to convert is to take an RGB code / 16 - thats the first number to change to hex, then take the modulus and * 16, that is the second
+
+// note - if I were to complete this task again, I would have used toString to convert to hex, I made this harder than it needed to be
+
+function rgb(r, g, b){
+    let convertChart = {
+        "10": "A", 
+        "11": "B", 
+        "12": "C",
+        "13": "D",
+        "14": "E",
+        "15": "F",
+        "16": "F"
+    }
+
+    function convert (num){
+      console.log(num)
+        if(num < 0){
+            return '00'
+        } else if(num > 255){
+          num = 255
+        }
+        let num1 = Math.floor(num / 16)
+        if(num1 > 9){
+            num1 = convertChart[String(num1)]
+        }
+        let num2 = num % 16
+        if(num2 > 9){
+            num2 = convertChart[String(num2)]
+    }
+    
+    return `${num1}${num2}`
+    }
+ return `${convert(r)}${convert(g)}${convert(b)}`
+  }
+
+rgb(148, 0, 211)
+
+
+
 // codewars level 5 challenge - https://www.codewars.com/kata/5581e52ac76ffdea700000c1 - This one is really interesting, looking at cellular automation and undertanding rule 30.
 function rule30(list, n){
     let rule30Obj = {
