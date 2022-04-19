@@ -1,3 +1,20 @@
+// codewars level 7 challenge - https://www.codewars.com/kata/5502c9e7b3216ec63c0001aa/solutions/javascript - categorise based on an array of arrays, each with 2 values
+
+function openOrSenior(data){
+  let result = [];
+  data.forEach(item => {
+    if(item[0] > 54 && item[1] > 7){
+      result.push("Senior")
+    } else {
+      result.push("Open")
+    }
+  })
+  return result
+}
+
+openOrSenior([[18, 20], [45, 2], [61, 12], [37, 6], [21, 21], [78, 9]])
+
+
 // codewars level 7 challenge - https://www.codewars.com/kata/5966f6343c0702d1dc00004c - break a number down into the smallest required change
 
 function giveChange(amount) {
