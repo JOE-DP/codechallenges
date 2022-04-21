@@ -1,3 +1,13 @@
+// codewars level 7 challenge - https://www.codewars.com/kata/56b22765e1007b79f2000079/train/javascript
+
+function isNarcissistic(n){
+  return testNum = String(n).split("").map(a => Number(a) ** String(n).length).reduce((curr, prev) => { return curr + prev}) == n
+  
+}
+
+// isNarcissistic(153)
+
+
 // codewars level 7 challenge - https://www.codewars.com/kata/5502c9e7b3216ec63c0001aa/solutions/javascript - categorise based on an array of arrays, each with 2 values
 
 function openOrSenior(data){
