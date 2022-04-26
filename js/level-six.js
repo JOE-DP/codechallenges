@@ -1,3 +1,20 @@
+// codewars level 6 - https://www.codewars.com/kata/6138ee916cb50f00227648d9/train/javascript
+
+function joust(listField, vKnightLeft, vKnightRight) {
+	if(listField[0].length / 2 < 3 || vKnightLeft == 0 && vKnightRight == 0 ){
+    return listField
+  }
+    
+  while(listField[0].indexOf(">") < listField[1].indexOf("<")){
+   listField[0] = " ".repeat(vKnightLeft) + listField[0].split("").reverse().slice(vKnightLeft).reverse().join("")
+   listField[1] = listField[1].split("").slice(vKnightRight).join("") + " ".repeat(vKnightRight)
+  }
+
+  return listField
+
+}  
+ 
+
 // codewars level 6 challenge - https://www.codewars.com/kata/57f4ccf0ab9a91c3d5000054/train/javascript - introduction to chmod
 
 function chmodCalculator(perm) {
