@@ -1,3 +1,62 @@
+// codewars level 5 challenge - https://www.codewars.com/kata/54e320dcebe1e583250008fd - working with factorial numbers
+function dec2FactString(nb) {
+  	
+    function convert(num, nb){
+      
+    let arr = []
+    for(let i = num; i > 0; i--){
+      let n = Math.floor(nb/factorialNum(i))
+      if(n > 10){
+          n = 'A'
+      }
+      arr.push(n)
+      nb -= (n * factorialNum(i))
+    }
+    return arr
+  }
+  
+  function findMaxFactor(num){
+      let maxFactor = 0;
+        for(let i = 1; num / factorialNum(i) >= 1; i++){
+        maxFactor = i
+      }
+    return maxFactor
+  }
+
+  function factorialNum(iNum){
+      let counter = iNum
+      while(counter > 1){          
+          iNum = iNum * (counter - 1)
+          counter--
+      }
+   return iNum
+  }
+return convert(findMaxFactor(nb), nb).join("") + 0
+}
+
+dec2FactString(463)
+
+function factString2Dec(str) {
+	let arr = str.split("")
+
+    return arr.map((item, i) => {
+        return factorialNum(arr.length -i -1) * item
+    }).reduce((prev, curr) => curr + prev)
+    
+
+    function factorialNum(iNum){
+        let counter = iNum
+        while(counter > 1){          
+            iNum = iNum * (counter - 1)
+            counter--
+        }
+     return iNum
+    }
+
+}
+
+factString2Dec('341010')
+
 // codewars level 5 challenge - https://www.codewars.com/kata/513e08acc600c94f01000001/train/javascript - converting RGB code to hex code - the formula to convert is to take an RGB code / 16 - thats the first number to change to hex, then take the modulus and * 16, that is the second
 
 // note - if I were to complete this task again, I would have used toString to convert to hex, I made this harder than it needed to be
