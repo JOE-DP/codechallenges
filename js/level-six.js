@@ -1,3 +1,39 @@
+//Codewars level 6  - https://www.codewars.com/kata/5fefee21b64cc2000dbfa875/train/javascript - rearranging numbers
+
+
+function minPermutation(n) {
+  
+  if(n == 0){
+    return 0
+  }
+  let splitNum = String(n).split("").filter(item => item != '-')
+  
+
+  function numZero(arr){
+    let zeros = []
+    arr.forEach(item => {
+      if(item == 0){
+        zeros.push('0')
+      }
+    })
+    return zeros.length
+  }
+
+ let splitNum1 = splitNum.filter(item => item != '0').sort((a, b) =>  b - a)
+ let maxNum = Math.min(...splitNum1)
+
+ splitNum1.pop()
+ splitNum1.push('0'.repeat(numZero(splitNum)))
+ splitNum1.push(maxNum)
+  
+  if(!String(n).split("").includes('-')){
+    return Number(splitNum1.reverse().join(""))
+  } else {
+  return Number( "-" + splitNum1.reverse().join(""))
+ 
+  }
+  }
+
 // codewars level 6 - https://www.codewars.com/kata/6138ee916cb50f00227648d9/train/javascript
 
 function joust(listField, vKnightLeft, vKnightRight) {
