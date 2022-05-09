@@ -1,3 +1,15 @@
+// codewars level 6 - https://www.codewars.com/kata/58539230879867a8cd00011c/train/javascript
+
+//** i need to come back to this one */
+
+function findChildren(dancingBrigade) {
+	return dancingBrigade.split("").map(item => item.charCodeAt()).sort((a, b) => a-b).map(item => String.fromCharCode(item)).join("")
+}
+
+findChildren('aaaaBBaaaAAbbb')
+
+
+
 //Codewars level 6  - https://www.codewars.com/kata/5fefee21b64cc2000dbfa875/train/javascript - rearranging numbers
 
 
