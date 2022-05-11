@@ -1,3 +1,21 @@
+// codewars level 7 challenge - https://www.codewars.com/kata/56e7d40129035aed6c000632/train/javascript
+
+function easyLine() {
+  
+  let arr = [1, 5, 10, 10, 5, 1]
+  
+  arr = arr.map((item, i) => item + arr[i+1])
+  arr.pop()
+  arr = [1, ...arr, 1]
+    
+  
+    
+    return arr
+  }
+  
+  easyLine()
+
+
 // codewars level 7 challenge - https://www.codewars.com/kata/56b22765e1007b79f2000079/train/javascript
 
 function isNarcissistic(n){
