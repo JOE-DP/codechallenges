@@ -1,19 +1,29 @@
+
+//Issues with the codewars challenge
 // codewars level 7 challenge - https://www.codewars.com/kata/56e7d40129035aed6c000632/train/javascript
 
-function easyLine() {
-  
-  let arr = [1, 5, 10, 10, 5, 1]
-  
+function easyLine(n) {
+  n = n+1
+  let arr = [1, 1]
+  let counter = 2
+  while(counter < n){
   arr = arr.map((item, i) => item + arr[i+1])
   arr.pop()
   arr = [1, ...arr, 1]
-    
-  
-    
-    return arr
+   counter++
+  }
+  if(n == 1){
+    arr = [1]
+  } else if(n == 2){
+    arr = [1, 1]
+  }
+ 
+  return arr.reduce((curr, prev) => curr + prev ** 2)
+	
   }
   
-  easyLine()
+  
+  easyLine(3)
 
 
 // codewars level 7 challenge - https://www.codewars.com/kata/56b22765e1007b79f2000079/train/javascript
