@@ -1,6 +1,36 @@
 
 //Issues with the codewars challenge
 
+//codewars level 7 challenge - https://www.codewars.com/kata/57f609022f4d534f05000024/train/javascript
+
+function stray(numbers) {
+  let obj = {}
+  let answer
+  numbers.forEach(addToObj)
+
+  function addToObj(item){
+    if(obj[item]){
+      obj[item]++
+    }
+    else{
+    obj[item] = 1
+    }
+  }
+ 
+  Object.keys(obj).forEach((key => {
+    if(obj[key] % 2 == 1){
+      answer = key
+    }
+  }))
+  return Number(answer)
+
+}
+
+stray([2,2,3,4,3])
+
+
+
+
 //codewars level 7 challenge - https://www.codewars.com/kata/56eb0be52caf798c630013c0/train/javascript
 
 function unluckyDays(year){
