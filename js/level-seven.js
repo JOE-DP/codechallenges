@@ -1,5 +1,23 @@
 
 //Issues with the codewars challenge
+
+//codewars level 7 challenge - https://www.codewars.com/kata/56eb0be52caf798c630013c0/train/javascript
+
+function unluckyDays(year){
+  let counter = 0;
+
+  for(let i = 0; i < 12; i++){
+    let d = new Date(year, i, 13)
+    if(d.getDay() == 5){
+      counter++
+    }
+  }
+  return counter;
+}
+
+unluckyDays(2012)
+
+
 // codewars level 7 challenge - https://www.codewars.com/kata/56e7d40129035aed6c000632/train/javascript
 
 function easyLine(n) {
