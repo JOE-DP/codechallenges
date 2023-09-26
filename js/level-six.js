@@ -1,3 +1,19 @@
+// codewars level 6 - https://www.codewars.com/kata/541c8630095125aba6000c00/train/javascript
+
+function digitalRoot(n) {
+  let splitN = String(n).split('')
+  while(splitN.length > 1){
+  let splitNAdded = splitN.reduce((acc, curr) => acc + Number(curr), 0)
+  splitN = String(splitNAdded).split('')
+  }
+  return Number(splitN[0])
+}
+
+
+
+
+
+
 // codewars level 6 - https://www.codewars.com/kata/58539230879867a8cd00011c/train/javascript
 
 //** i need to come back to this one */
